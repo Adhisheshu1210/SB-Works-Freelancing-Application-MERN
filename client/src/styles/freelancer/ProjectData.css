@@ -1,0 +1,219 @@
+/* ================= GLOBAL ================= */
+.project-data-page {
+  padding: 3vh 2vw;
+  display: flex;
+  gap: 2vw;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  animation: bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove {
+  0% { background-position: left; }
+  100% { background-position: right; }
+}
+
+/* ================= LEFT CONTAINER ================= */
+.project-data-container {
+  width: 60%;
+  animation: fadeSlide 0.6s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= PROJECT INFO ================= */
+.project-data {
+  background: rgba(255,255,255,0.08);
+  padding: 2vh 2vw;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(0,255,255,0.15);
+  backdrop-filter: blur(10px);
+}
+
+.project-data h3 {
+  color: #00eaff;
+  font-size: 1.6rem;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.project-data p {
+  font-size: 0.9rem;
+  color: #eaeaea;
+}
+
+/* ================= SKILLS ================= */
+.required-skills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.required-skills p {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  color: #ff9d00;
+  border: 1px solid #ff9d00;
+  box-shadow: 0 0 10px rgba(255,157,0,0.5);
+  animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 5px rgba(255,157,0,0.3); }
+  to { box-shadow: 0 0 15px rgba(255,157,0,0.9); }
+}
+
+/* ================= FORMS ================= */
+.project-form-body {
+  margin-top: 4vh;
+  background: rgba(255,255,255,0.06);
+  padding: 2vh 2vw;
+  border-radius: 1rem;
+  box-shadow: 0 0 40px rgba(0,255,255,0.2);
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.project-form-body h4 {
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+/* ================= INPUTS ================= */
+.project-form-body input,
+.project-form-body textarea,
+.chat-input input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  border: 1px solid #00eaff;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.project-form-body input:focus,
+.project-form-body textarea:focus,
+.chat-input input:focus {
+  box-shadow: 0 0 15px #00eaff;
+  border-color: #00eaff;
+}
+
+/* ================= BUTTONS ================= */
+.project-form-body button,
+.chat-input button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #00eaff, #00ffcc);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-form-body button:hover,
+.chat-input button:hover {
+  box-shadow: 0 0 25px #00ffcc;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ================= CHAT ================= */
+.project-chat-container {
+  width: 35%;
+  background: rgba(255,255,255,0.07);
+  border-radius: 1rem;
+  padding: 2vh 1.5vw;
+  box-shadow: 0 0 40px rgba(0,255,255,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-chat-container h4 {
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* ================= MESSAGES ================= */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.my-message,
+.received-message {
+  display: flex;
+  margin-bottom: 10px;
+  animation: messageIn 0.3s ease-in;
+}
+
+@keyframes messageIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.my-message {
+  justify-content: flex-end;
+}
+
+.my-message div {
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  padding: 10px 15px;
+  border-radius: 20px 20px 0 20px;
+  max-width: 75%;
+  box-shadow: 0 0 15px rgba(255,81,47,0.8);
+}
+
+.received-message div {
+  background: linear-gradient(45deg, #24c6dc, #514a9d);
+  padding: 10px 15px;
+  border-radius: 20px 20px 20px 0;
+  max-width: 75%;
+  box-shadow: 0 0 15px rgba(36,198,220,0.8);
+}
+
+.chat-messages p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.chat-messages h6 {
+  margin: 0;
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+/* ================= CHAT INPUT ================= */
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ================= SCROLLBAR ================= */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #00eaff;
+  border-radius: 10px;
+}

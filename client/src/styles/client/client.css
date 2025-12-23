@@ -1,0 +1,181 @@
+.client-projects-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 8vh;
+  width: 100%;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Poppins', sans-serif;
+  color: #1a1717;
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+/* Projects container */
+.client-projects-list {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 80vh;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #00c8ff44, 0 0 50px #ff4d6d33;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Header */
+.client-projects-header {
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.client-projects-header h3 {
+  font-size: 1.8rem;
+  color: #ff4d6d;
+  text-shadow: 0 0 10px #ff4d6d88;
+}
+
+.client-projects-header select {
+  width: 25vw;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: #0f202780;
+  color: #00c8ff;
+  font-weight: 600;
+  box-shadow: 0 0 10px #00c8ff44;
+  transition: all 0.3s ease;
+}
+
+.client-projects-header select:hover {
+  box-shadow: 0 0 20px #00c8ff99;
+}
+
+/* Project card */
+.listed-project {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+  border-left: 5px solid #ff4d6d;
+  box-shadow: 0 0 10px #ff4d6d22, 0 0 30px #00c8ff11;
+}
+
+.listed-project:hover {
+  transform: translateY(-5px) scale(1.01);
+  background: linear-gradient(135deg, rgba(255, 77, 109, 0.2), rgba(0, 200, 255, 0.2));
+  box-shadow: 0 0 20px #ff4d6d88, 0 0 40px #00c8ff44;
+  border-left: 5px solid #00c8ff;
+}
+
+/* Project head */
+.listed-project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.listed-project-head h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00c8ff;
+  text-shadow: 0 0 10px #00c8ff88;
+}
+
+.listed-project-head p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ff4d6daa;
+}
+
+/* Budget & description */
+.listed-project h5 {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  color: #ffcc00;
+  text-shadow: 0 0 5px #ffcc0044;
+}
+
+.listed-project p {
+  font-size: 0.95rem;
+  color: #5719d3cc;
+  line-height: 1.4;
+}
+
+/* Skills */
+.listed-project .skills {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.listed-project .skills h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #ff4d6d;
+  border: 1px solid #ff4d6d;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.listed-project .skills h6:hover {
+  background-color: #ff4d6d33;
+  box-shadow: 0 0 10px #ff4d6d88;
+}
+
+/* Bids / Status */
+.listed-project .bids-data {
+  display: flex;
+  gap: 30px;
+  margin-top: 1.5rem;
+}
+
+.listed-project .bids-data h6 {
+  color: #00c8ff;
+  text-shadow: 0 0 5px #00c8ff55;
+  font-size: 0.9rem;
+}
+
+/* Separator */
+.listed-project hr {
+  margin-top: 1rem;
+  border: 0.5px solid #ffffff33;
+}
+
+/* Scrollbar */
+.client-projects-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.client-projects-list::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1);
+}
+
+.client-projects-list::-webkit-scrollbar-thumb {
+  background: #00c8ff66;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.client-projects-list::-webkit-scrollbar-thumb:hover {
+  background: #ff4d6d88;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

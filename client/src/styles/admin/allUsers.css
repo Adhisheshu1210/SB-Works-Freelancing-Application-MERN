@@ -1,0 +1,112 @@
+/* ================= PAGE ================= */
+.all-users-page {
+  padding: 4vh 2vw;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  animation: bgShift 10s infinite alternate;
+}
+
+@keyframes bgShift {
+  0% { background-position: left; }
+  100% { background-position: right; }
+}
+
+.all-users-page h3 {
+  font-size: 1.8rem;
+  color: #00eaff;
+  text-shadow: 0 0 12px #00eaff;
+  margin-bottom: 3vh;
+}
+
+/* ================= USERS LIST ================= */
+.all-users {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= USER CARD ================= */
+.user {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  padding: 2vh 1.5vw;
+  border-radius: 1rem;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(0,234,255,0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,234,255,0.15);
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* glowing shine effect */
+.user::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0,234,255,0.25),
+    transparent
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.user:hover::before {
+  opacity: 1;
+  animation: shineMove 1.2s linear;
+}
+
+@keyframes shineMove {
+  from { transform: translateX(-50%) rotate(25deg); }
+  to { transform: translateX(50%) rotate(25deg); }
+}
+
+.user:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(0,234,255,0.6);
+}
+
+/* ================= USER INFO ================= */
+.user span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user span b {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #00ffcc;
+  text-shadow: 0 0 8px rgba(0,255,204,0.8);
+}
+
+.user span p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #d6faff;
+  word-break: break-word;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .user {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

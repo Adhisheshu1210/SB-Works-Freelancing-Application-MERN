@@ -1,0 +1,83 @@
+/* Navbar container */
+.navbar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  animation: navbarFadeIn 1s ease forwards;
+}
+
+/* Logo / Title */
+.navbar h3 {
+  color: #ff4d6d;
+  margin: 0;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px #ff4d6d66, 0 0 20px #ff4d6d33;
+  transition: all 0.3s ease;
+}
+
+.navbar h3:hover {
+  text-shadow: 0 0 20px #ff4d6daa, 0 0 40px #ff4d6d55;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Navigation options container */
+.nav-options {
+  display: flex;
+  width: 45%;
+  justify-content: space-evenly;
+}
+
+/* Individual nav items */
+.nav-options p {
+  margin: 0;
+  color: #a0a0a0;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover animations and glowing underline */
+.nav-options p::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #00c8ff, #ff4d6d);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-options p:hover::after {
+  width: 100%;
+}
+
+.nav-options p:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #00c8ff, 0 0 10px #ff4d6d;
+  transform: scale(1.05);
+}
+
+/* Glowing fade-in animation for navbar */
+@keyframes navbarFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

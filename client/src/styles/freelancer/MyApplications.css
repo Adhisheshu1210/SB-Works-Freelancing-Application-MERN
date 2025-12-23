@@ -1,0 +1,181 @@
+/* ===============================
+   PAGE BACKGROUND
+================================*/
+.user-applications-page {
+    padding: 2vh 2vw;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+    color: #eaeaea;
+    animation: bgMove 20s infinite linear;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.user-applications-page h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5vh;
+    color: #00f2ff;
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.7);
+}
+
+/* ===============================
+   APPLICATION LIST CONTAINER
+================================*/
+.user-applications-body {
+    height: 76vh;
+    border-radius: 1rem;
+    padding-top: 1vh;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.15);
+}
+
+/* Custom Scrollbar */
+.user-applications-body::-webkit-scrollbar {
+    width: 8px;
+}
+.user-applications-body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00f2ff, #ee4950);
+    border-radius: 1rem;
+}
+
+/* ===============================
+   SINGLE APPLICATION CARD
+================================*/
+.user-application {
+    margin: 1.2vh 1vw;
+    padding: 2vh 2vw;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-application:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 
+        0 0 20px rgba(0, 242, 255, 0.5),
+        0 0 40px rgba(238, 73, 80, 0.25);
+}
+
+/* Divider */
+.user-application hr {
+    border: none;
+    height: 1px;
+    margin-top: 2vh;
+    background: linear-gradient(90deg, transparent, #00f2ff, transparent);
+}
+
+/* ===============================
+   CARD BODY
+================================*/
+.user-application-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.vertical-line {
+    width: 1px;
+    background: linear-gradient(180deg, transparent, #00f2ff, transparent);
+}
+
+/* ===============================
+   LEFT & RIGHT SECTIONS
+================================*/
+.user-application-half {
+    width: 48%;
+}
+
+.user-application-half h4 {
+    font-size: 1.3rem;
+    color: #00f2ff;
+    margin-bottom: 0.5vh;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+}
+
+.user-application-half p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #d5d5d5;
+}
+
+.user-application-half h5 {
+    font-size: 1rem;
+    margin-top: 1vh;
+    color: #ffb703;
+}
+
+.user-application-half h6 {
+    font-size: 0.9rem;
+    margin-top: 1vh;
+    color: #ccc;
+}
+
+/* ===============================
+   SKILL CHIPS
+================================*/
+.application-skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 0.5vh;
+}
+
+.application-skills p {
+    padding: 6px 14px;
+    border-radius: 1rem;
+    font-size: 0.65rem;
+    color: #00f2ff;
+    border: 1px solid #00f2ff;
+    background: rgba(0, 242, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.application-skills p:hover {
+    background: #00f2ff;
+    color: #001219;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.8);
+}
+
+/* ===============================
+   STATUS COLORS
+================================*/
+.user-application-half h6 b {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.user-application-half h6 b:contains("approved") {
+    color: #00ff9d;
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.7);
+}
+
+.user-application-half h6 b:contains("pending") {
+    color: #ffb703;
+    text-shadow: 0 0 10px rgba(255, 183, 3, 0.7);
+}
+
+.user-application-half h6 b:contains("rejected") {
+    color: #ff4d6d;
+    text-shadow: 0 0 10px rgba(255, 77, 109, 0.7);
+}

@@ -1,0 +1,209 @@
+/* Page container */
+.client-applications-page {
+  position: relative;
+  padding: 2vh 2vw;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 90vh;
+}
+
+/* Header and filter */
+.client-applications-page span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.client-applications-page span h3 {
+  font-size: 1.8rem;
+  color: #ff4d6d;
+  text-shadow: 0 0 10px #ff4d6d88, 0 0 20px #00c8ff44;
+  animation: glowText 2s infinite alternate;
+}
+
+.client-applications-page span select {
+  width: 50%;
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  border: 2px solid #00c8ff44;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.client-applications-page span select:focus {
+  border-color: #ff4d6d;
+  box-shadow: 0 0 10px #ff4d6d88, 0 0 20px #00c8ff44;
+}
+
+/* Applications body */
+.client-applications-body {
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.1), 0 0 40px rgba(255, 77, 109, 0.1);
+  height: 76vh;
+  border-radius: 1rem;
+  margin-top: 2vh;
+  padding: 2vh 2vw;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Individual application card */
+.client-application {
+  padding: 2vh 2vw;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 10px #00c8ff22, 0 0 20px #ff4d6d11;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-application:hover {
+  background-color: rgba(12, 105, 148, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #00c8ff44, 0 0 40px #ff4d6d33;
+}
+
+/* Application layout */
+.client-application-body {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+
+/* Vertical line */
+.vertical-line {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
+}
+
+/* Half card */
+.client-application-half {
+  width: 48%;
+}
+
+.client-application-half h4 {
+  font-size: 1.3rem;
+  color: #00c8ffaa;
+  margin-bottom: 0.5rem;
+}
+
+.client-application-half p {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.client-application-half span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.client-application-half span h5 {
+  font-size: 1.1rem;
+  color: #ff4d6d;
+}
+
+.client-application-half span .application-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.client-application-half span .application-skills p {
+  color: #ff4d6d;
+  border: 1px solid #ff4d6d;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.client-application-half span .application-skills p:hover {
+  background-color: #ff4d6d22;
+  transform: scale(1.05);
+}
+
+/* Budget & proposed budget */
+.client-application-half h6 {
+  font-size: 0.9rem;
+  color: #00c8ffaa;
+  margin-top: 0.5rem;
+}
+
+.client-application-half h6 b {
+  color: #fff;
+}
+
+/* Approve / Reject buttons */
+.approve-btns {
+  display: flex;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.approve-btns button {
+  flex: 1;
+  padding: 0.7rem 0;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+  animation: pulseButton 2s infinite;
+}
+
+/* Approve button */
+.approve-btns .btn-success {
+  background: linear-gradient(270deg, #00c8ff, #00ff85, #00c8ff);
+}
+
+.approve-btns .btn-success:hover {
+  box-shadow: 0 0 25px #00ff85, 0 0 50px #00c8ff;
+  transform: scale(1.05);
+}
+
+/* Reject button */
+.approve-btns .btn-danger {
+  background: linear-gradient(270deg, #ff4d6d, #ff9a00, #ff4d6d);
+}
+
+.approve-btns .btn-danger:hover {
+  box-shadow: 0 0 25px #ff4d6d, 0 0 50px #ff9a00;
+  transform: scale(1.05);
+}
+
+/* Horizontal rule */
+.client-application hr {
+  border: none;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-top: 1rem;
+}
+
+/* Animations */
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px #ff4d6d88, 0 0 20px #00c8ff44; }
+  50% { text-shadow: 0 0 20px #ff4d6daa, 0 0 40px #00c8ff88; }
+  100% { text-shadow: 0 0 10px #ff4d6d88, 0 0 20px #00c8ff44; }
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes pulseButton {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 200, 255, 0.3); }
+  50% { box-shadow: 0 0 20px #00c8ff66, 0 0 40px #ff4d6d44; }
+}

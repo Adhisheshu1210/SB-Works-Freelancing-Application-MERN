@@ -1,0 +1,263 @@
+/* ===============================
+   ROOT RESET
+================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   PAGE BACKGROUND
+================================*/
+.all-projects-page {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2vw;
+  margin-top: 5vh;
+  min-height: 90vh;
+  padding-bottom: 4vh;
+
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: bgFlow 18s ease infinite;
+}
+
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===============================
+   FILTER PANEL
+================================*/
+.project-filters {
+  width: 20%;
+  height: 82vh;
+  padding: 3vh 1.5vw;
+  border-radius: 1rem;
+  overflow-y: auto;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 242, 255, 0.25);
+  box-shadow: 0 0 30px rgba(0, 242, 255, 0.3);
+
+  animation: slideLeft 0.7s ease;
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.project-filters h3 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #00f2ff;
+  text-shadow: 0 0 15px rgba(0, 242, 255, 0.9);
+}
+
+.filters {
+  margin-top: 3vh;
+}
+
+.filters h5 {
+  font-size: 1.1rem;
+  color: #ffb703;
+  margin-bottom: 1vh;
+}
+
+/* Checkbox styling */
+.form-check {
+  margin-bottom: 8px;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #00f2ff;
+  border-color: #00f2ff;
+  box-shadow: 0 0 12px rgba(0, 242, 255, 0.9);
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #e6e6e6;
+}
+
+/* ===============================
+   PROJECT LIST CONTAINER
+================================*/
+.projects-list {
+  width: 75%;
+  height: 82vh;
+  padding: 3vh 2vw;
+  border-radius: 1rem;
+  overflow-y: auto;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(238, 73, 80, 0.25);
+  box-shadow: 0 0 35px rgba(238, 73, 80, 0.35);
+
+  display: flex;
+  flex-direction: column;
+  animation: slideRight 0.7s ease;
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.projects-list h3 {
+  font-size: 1.8rem;
+  color: #00f2ff;
+  text-shadow: 0 0 15px rgba(0, 242, 255, 0.9);
+}
+
+/* ===============================
+   PROJECT CARD
+================================*/
+.listed-project {
+  padding: 2vh 1.5vw;
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.listed-project:hover {
+  cursor: pointer;
+  transform: translateY(-6px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 25px rgba(0, 242, 255, 0.45),
+    0 0 45px rgba(238, 73, 80, 0.35);
+}
+
+/* ===============================
+   PROJECT HEADER
+================================*/
+.listed-project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+
+.listed-project-head h3 {
+  width: 80%;
+  font-size: 1.4rem;
+  color: #00f2ff;
+}
+
+.listed-project-head p {
+  font-size: 0.8rem;
+  color: #cccccc;
+}
+
+/* ===============================
+   PROJECT CONTENT
+================================*/
+.listed-project h5 {
+  font-size: 0.95rem;
+  color: #ffb703;
+  margin-bottom: 0.5vh;
+}
+
+.listed-project p {
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* ===============================
+   SKILLS
+================================*/
+.listed-project .skills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 1vh;
+}
+
+.listed-project .skills h6 {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #ee4950;
+  border: 1px solid #ee4950;
+  padding: 6px 12px;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.listed-project .skills h6:hover {
+  background: #ee4950;
+  color: white;
+  box-shadow: 0 0 18px rgba(238, 73, 80, 0.9);
+}
+
+/* ===============================
+   BIDS DATA
+================================*/
+.listed-project .bids-data {
+  display: flex;
+  gap: 30px;
+  margin-top: 2vh;
+}
+
+.listed-project .bids-data p,
+.listed-project .bids-data h6 {
+  font-size: 0.85rem;
+  color: #cfcfcf;
+}
+
+/* ===============================
+   DIVIDER
+================================*/
+.projects-list hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00f2ff, transparent);
+  margin: 2vh 0;
+}
+
+/* ===============================
+   SCROLLBARS
+================================*/
+.projects-list::-webkit-scrollbar,
+.project-filters::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projects-list::-webkit-scrollbar-thumb,
+.project-filters::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f2ff, #ee4950);
+  border-radius: 1rem;
+}
+
+/* ===============================
+   RESPONSIVE
+================================*/
+@media (max-width: 900px) {
+  .all-projects-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-filters,
+  .projects-list {
+    width: 95%;
+    height: auto;
+  }
+}
