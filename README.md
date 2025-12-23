@@ -248,9 +248,27 @@ Notifications system
 
 Deployment on cloud (AWS / Render / Vercel)
 
+### 📸 Application Screenshots
+# 🛠️ Admin Panel
+<p align="center"> <img src="screenshots/admin%20dashboard.png" width="260" /> <img src="screenshots/admin%20all%20users%20page.png" width="260" /> <img src="screenshots/admin%20all%20project%20page.png" width="260" /> </p> <p align="center"> <img src="screenshots/admin%20all%20application%20page.png" width="260" /> </p>
+
+# 👤 Client Panel
+<p align="center"> <img src="screenshots/client%20dashboard%20page.png" width="260" /> <img src="screenshots/client%20project%20page.png" width="260" /> <img src="screenshots/client%20new%20project%20page.png" width="260" /> </p> <p align="center"> <img src="screenshots/client%20application%20page.png" width="260" /> </p>
+
+# 🧑‍💻 Freelancer Panel
+<p align="center"> <img src="screenshots/freelancer%20dashboard.png" width="260" /> <img src="screenshots/freelancer%20all%20projects%20page.png" width="260" /> <img src="screenshots/freelancer%20my%20project%20page.png" width="260" /> </p> <p align="center"> <img src="screenshots/freelancer%20application%20page.png" width="260" /> <img src="screenshots/freelancer%20project%20communication%20page.png" width="260" /> </p>
+
+# 🔐 Authentication Pages
+<p align="center"> <img src="screenshots/login%20page.png" width="260" /> <img src="screenshots/register%20page.png" width="260" /> </p>
+
+# 🌐 Landing Page
+<p align="center"> <img src="screenshots/landing%20page.png" width="520" /> </p>
+
 ### 👨‍💻 Developed By
 
 Angothu Adhisheshu
+
 🎓 MERN Stack Developer
 🔗 GitHub: https://github.com/Adhisheshu1210/"# SB-Works-Freelancing-Application-MERN" 
+
 "# SB-Works-Freelancing-Application-MERN" 
