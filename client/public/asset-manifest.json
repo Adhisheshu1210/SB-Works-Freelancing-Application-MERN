@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/SB-Works-Freelancing-Application-MERN/static/css/main.82ce33f9.css",
+    "main.js": "/SB-Works-Freelancing-Application-MERN/static/js/main.039d08de.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/SB-Works-Freelancing-Application-MERN/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/landing-bg.jpg": "/SB-Works-Freelancing-Application-MERN/static/media/landing-bg.1e078eb4b5d52ee570db.jpg",
+    "index.html": "/SB-Works-Freelancing-Application-MERN/index.html",
+    "main.82ce33f9.css.map": "/SB-Works-Freelancing-Application-MERN/static/css/main.82ce33f9.css.map",
+    "main.039d08de.js.map": "/SB-Works-Freelancing-Application-MERN/static/js/main.039d08de.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/SB-Works-Freelancing-Application-MERN/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82ce33f9.css",
+    "static/js/main.039d08de.js"
+  ]
+}
