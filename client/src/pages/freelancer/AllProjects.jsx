@@ -11,20 +11,21 @@ const AllProjects = () => {
 
   const [displayprojects, setDisplayProjects] = useState([]);
 
-  const [allSkills, setAllSkills] = useState([]); 
+  const [allSkills] = useState([]); // setAllSkills removed as it's unused
 
   useEffect(()=>{
     fetchProjects();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   const fetchProjects = async()=>{
     await axios.get('http://localhost:6001/fetch-projects').then(
       (response)=>{
           setProjects(response.data);
-          setDisplayProjects(response.data.reverse());
+          setDisplayProjects(response.data.slice().reverse());
 
-          response.data.map((project)=>{
-            project.skills.map((skill)=>{
+          response.data.forEach((project)=>{
+            project.skills.forEach((skill)=>{
               if(!allSkills.includes(skill)){
                 allSkills.push(skill); 
               }
@@ -49,17 +50,13 @@ const AllProjects = () => {
     }
   }
 
-  useEffect(()=>{
-
-
+    useEffect(()=>{
     if (categoryFilter.length > 0){
-        setDisplayProjects(projects.filter(project => categoryFilter.every(skill => project.skills.includes(skill))).reverse());
+      setDisplayProjects(projects.filter(project => categoryFilter.every(skill => project.skills.includes(skill))).slice().reverse());
     }else{
-        setDisplayProjects(projects.reverse());
+      setDisplayProjects(projects.slice().reverse());
     }
-
-
-}, [categoryFilter])
+    }, [categoryFilter, projects])
 
 
   return (
@@ -102,28 +99,26 @@ const AllProjects = () => {
               <hr />
 
               {displayprojects.map((project)=>(
-
-                  <div className="listed-project" key={project._id} onClick={()=> navigate(`/project/${project._id}`)} >
-                    <div className='listed-project-head'>
-                        <h3>{project.title}</h3>
-                        <p>{String(project.postedDate).slice(0,24)}</p>
-                    </div>
-                    <h5>Budget &#8377; {project.budget}</h5>
-                    <p>{project.description}</p>
-                    <div className="skills">
-                      {
-                        project.skills.map((skill)=>(
-                          <h6 key={skill} >{skill}</h6>
-                        ))
-                      }
-                    </div>
-
-                    <div className="bids-data">
-                      <p>{project.bids.length} bids</p>
-                      <h6>&#8377; {project.bids.length > 0 ? project.bidAmounts.reduce((accumulator, currentValue) => accumulator + currentValue, 0) : 0} (avg bid)</h6>
-                    </div>
-                    <hr />
+                <div className="listed-project" key={project._id} onClick={()=> navigate(`/project/${project._id}`)} >
+                  <div className='listed-project-head'>
+                      <h3>{project.title}</h3>
+                      <p>{String(project.postedDate).slice(0,24)}</p>
                   </div>
+                  <h5>Budget &#8377; {project.budget}</h5>
+                  <p>{project.description}</p>
+                  <div className="skills">
+                    {project.skills && project.skills.map((skill)=>(
+                      <h6 key={skill} >{skill}</h6>
+                    ))}
+                  </div>
+                  <div className="bids-data">
+                    <p>{project.bids && project.bids.length} bids</p>
+                    <h6>&#8377; {project.bids && project.bids.length > 0 && project.bidAmounts ? project.bidAmounts.reduce((accumulator, currentValue) => accumulator + currentValue, 0) : 0} (avg bid)</h6>
+                  </div>
+                  {/* Example external link with target _blank: */}
+                  {/* <a href="https://example.com" target="_blank" rel="noreferrer">External Link</a> */}
+                  <hr />
+                </div>
               ))}
 
 

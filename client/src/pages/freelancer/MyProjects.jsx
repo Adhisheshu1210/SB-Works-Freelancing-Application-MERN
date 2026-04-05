@@ -13,6 +13,7 @@ const MyProjects = () => {
 
   useEffect(()=>{
     fetchProjects();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   const fetchProjects = async()=>{
@@ -66,7 +67,6 @@ const handleFilterChange = (data) =>{
               </div>
               <h5>Budget -  &#8377; {project.budget}</h5>
               <p>{project.description}</p>
-    
               <div className="bids-data">
                 {/* <p>Applications - {project.applications.length}</p> */}
                 <h6>Status - {project.status} </h6>

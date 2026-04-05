@@ -42,7 +42,8 @@ const ProjectData = () => {
     return () => {
       socket?.off("message-from-user");
     };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fetchProject, fetchChats, joinSocketRoom, socket]);
 
   /* ================= FUNCTIONS ================= */
 
