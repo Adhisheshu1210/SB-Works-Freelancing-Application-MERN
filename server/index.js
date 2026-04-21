@@ -29,7 +29,8 @@ io.on("connection", (socket) => {
 });
 
 // ==================== DATABASE ====================
-mongoose.connect('mongodb://localhost:27017/Freelancing', {
+mongoose.connect('mongodb+srv://freelancer_admin1:freelancer_admin@freelancer-cluster.caks6dy.mongodb.net/', {
+
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
