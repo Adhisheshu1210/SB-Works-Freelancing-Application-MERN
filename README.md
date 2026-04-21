@@ -8,7 +8,8 @@ The platform connects Clients and Freelancers, enabling clients to post projects
 # 🔗 GitHub Repository
 
 👉 GitHub: https://github.com/Adhisheshu1210/
-👉 Youtube link:https://youtu.be/TccmwzWjkss
+👉 Youtube link: https://youtu.be/TccmwzWjkss
+👉 Live link:  https://sb-work-freelancing.vercel.app/
 
 ## 🚀 Key Features
 👤 User Authentication
